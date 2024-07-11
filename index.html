@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <span class="navbar-brand">Music Player</span>
+        <div class="ml-auto mr-3">
+            <div class="input-group">
+                <input type="text" class="form-control custom-search-input" placeholder="Search for music..." id="search-input">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-success" type="button" id="load-files-button">Load Folder</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="music-player">
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div id="playlist" class="border rounded p-3">
+                    <h5>Playlist</h5>
+                    <ul id="playlist-items" class="list-group"></ul>
+                </div>
+                <div id="categories" class="border rounded p-3 mt-3">
+                    <h5>Categories</h5>
+                    <ul id="category-items" class="list-group"></ul>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div id="current-track" class="border rounded p-3 mb-3">
+                    <h5>Now Playing</h5>
+                    <div id="current-track-info">
+                        <img id="current-track-image" src="./images/music.jpg" alt="Album Art" class="img-fluid mb-2">
+                    </div>
+                    <p id="current-track-title">Title: None</p>
+                    <div id="player-controls" class="d-flex flex-column justify-content-center align-items-center border rounded p-3">
+                        <div class="d-flex justify-content-between align-items-center mb-3 w-100">
+                            <button class="btn btn-secondary" id="prev-button">
+                                <i class="bi bi-skip-backward-fill"></i>
+                            </button>
+                            <button class="btn btn-primary" id="play-button">
+                                <i class="bi bi-play-fill"></i>
+                            </button>
+                            <button class="btn btn-secondary" id="next-button">
+                                <i class="bi bi-skip-forward-fill"></i>
+                            </button>
+                        </div>
+                        <div class="w-100 mb-2">
+                            <input type="range" id="progress-bar" min="0" max="100" step="1" class="form-control-range">
+                            <div class="d-flex justify-content-between">
+                                <span id="current-time">0:00</span>
+                                <span id="total-time">0:00</span>
+                            </div>
+                        </div>
+                        <div class="w-100">
+                            <input type="range" id="volume-control" min="0" max="1" step="0.01" class="form-control-range">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+body {
+  background: url('images/backg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: rgba(48, 4, 128, 0.8); /* Semi-transparent background */
+  color: #fff;
+}
+
+.navbar-brand {
+  color: #f8f3f3;
+  font-size: 1.5rem;
+}
+
+.navbar-brand:hover {
+  color: #32e61b;
+}
+
+.custom-search-input {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 300px;
+}
+
+.btn-outline-success {
+  background-color: #28a745;
+  border: none;
+  color: #fff;
+}
+
+.btn-outline-success:hover {
+  background-color: #218838;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+#playlist,
+#categories {
+  background-color: rgba(168, 115, 228, 0.9); /* Semi-transparent background */
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+#current-track {
+  text-align: center;
+  background-color: rgba(51, 53, 53, 0.9); /* Semi-transparent background */
+}
+#current-track h5 {
+  color: #f3ebea; /* Change this to the color you want */
+}
+
+#current-track-image {
+  max-width: 100%;
+  height: auto;
+}
+
+#player-controls {
+  background-color: rgba(168, 115, 228, 0.9); /* Semi-transparent background */
+}
+
+#progress-bar,
+#volume-control {
+  width: 100%;
+}
